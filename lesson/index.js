@@ -12,16 +12,25 @@ $("#second-animation-button").click(function(){
 
 $("#third-animation-button").click(function(){
   $("#third-animation-div").animate({
-    height: 'toggle'
+    opacity: 'toggle',
+    height: "toggle"
   });
 });
 
 $("#fourth-animation-button").click(function(){
-  $("#fourth-animation-div").animate({height: '300px', opacity: '0.4'}, "slow");
-  $("#fourth-animation-div").animate({width: '300px', opacity: '0.8'}, "slow");
-  $("#fourth-animation-div").animate({height: '100px', opacity: '0.4'}, "slow");
-  $("#fourth-animation-div").animate({width: '100px', opacity: '0.8'}, "slow");
+  $("#fourth-animation-div").animate({height: '300px', opacity: '0.4'}, 2000);
+  $("#fourth-animation-div").animate({width: '300px', opacity: '0.8'}, 2000);
+  $("#fourth-animation-div").animate({height: '100px', opacity: '0.4'}, 2000);
+  $("#fourth-animation-div").animate({width: '100px', opacity: '0.8'}, 2000);
 
   $("#fourth-animation-div").animate({left: '100px'}, "slow");
   $("#fourth-animation-div").animate({fontSize: '3em'}, "slow");
+});
+
+$("input").hover(function(){
+  $("input").animate({height: "35px", width: "200px"})
+});
+
+$("input").mouseleave(function(){
+  $("input").animate({height: "20px", width: "141px"})
 });
